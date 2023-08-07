@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&family=Yantramanav:wght@300&display=swap");
+
+body {
+  background-color: bisque;
+}
+* {
+  margin: 0;
+  padding: 0px;
+}
+nav {
+  font-family: "Yantramanav", sans-serif;
+}
+nav ul li {
+  padding-right: 15px;
+  padding-left: 5px;
+}
+nav ul {
+  background-color: black;
+  color: aliceblue;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.navbnd img {
+  height: "50px";
+  width: "50px";
+}
+.container {
+  min-height: 75vh;
+  background-color: black;
+  color: white;
+  margin: 20px auto;
+  display: flex;
+  border-radius: 8px;
+  background-image: url("bgimage3.jpg");
+  background-size: cover;
+  padding-top: 3px;
+  padding-left: 10px;
+}
+.bottom {
+  height: 12vh;
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.myprogressbar {
+  width: 80vw;
+  margin: auto;
+  cursor: pointer;
+}
+
+.icons {
+  margin-top: 7px ;
+  margin-bottom: 19px;
+
+}
+
+.icons i {
+  cursor: pointer;
+  margin: 4px;
+}
+.songItem {
+  display: flex;
+  height: 7vh;
+  width: 30vw;
+  background-color: white;
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+.songItem img {
+  width: 42px;
+  margin: 23px;
+  border-radius: 34px;
+}
+.timestamp {
+  margin: 0 23px;
+}
+.timestamp i {
+  margin: 0 6px;
+  cursor: pointer;
+}
+.songInfo {
+  position: absolute;
+  left: 2vw;
+  margin-top: 24px;
+}
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+/*a.home:link{
+  cursor: pointer;
+  text-decoration: none;
+  color: red;
+}*/
+
+a.home:visited{
+  text-decoration: none;
+  color: greenyellow;
+}
+a.home:hover{
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(255, 0, 225);
+}
