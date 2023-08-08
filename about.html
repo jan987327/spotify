@@ -10,23 +10,19 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     <script src="script.js"></script>
     <link rel="stylesheet" href="style1.css">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .d{
-             height: 88vh;
-        }
         p{
             text-align: center;
             padding: 15px;
-           
+            flex: 1;
         }
         body{
+            display: flex;
             background-color: rgb(255, 0, 128);
             color: white;
+            flex-direction: column;
         }
         span{
             color: rgb(0, 0, 0);
@@ -35,23 +31,9 @@
             font-size: larger;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
-        footer{
-            background-color: black;
-            color: white;
-            height: 4vh;
-            text-align: center;
-            position: sticky;
-            bottom: 0;
+        input{
+            color: black;
         }
-        .contactform{
-            display: grid;
-            place-items: center;
-            margin-top: 50px;
-            font-size: larger;
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-     
     </style>
 </head>
 <body>
@@ -64,13 +46,13 @@
       </ul>
     </nav>
     <div class="container-fluid d">
-        <p ><span>Welcome to our Spotify Clone!</span><br><br><br> Here, we're dedicated to bringing you an unparalleled music streaming experience. Just like the original Spotify, our platform is designed to cater to your musical cravings. Whether you're in the mood for chart-topping hits or indie gems, our vast library has got you covered. Our user-friendly interface makes it a breeze to search, discover, and create playlists that resonate with your unique taste. We're more than just a clone – we're a community of music enthusiasts striving to provide you with seamless navigation, crystal-clear audio quality, and a visually engaging journey through sound. Join us on this melodic adventure and dive into the world of music like never before. Embrace the familiar and the innovative with our Spotify Clone, where the rhythm of your life finds its perfect match.</p>
+        <p ><center><h1><span>Welcome to our Spotify Clone!</span></h1></center><br> Here, we're dedicated to bringing you an unparalleled music streaming experience. Just like the original Spotify, our platform is designed to cater to your musical cravings. Whether you're in the mood for chart-topping hits or indie gems, our vast library has got you covered. Our user-friendly interface makes it a breeze to search, discover, and create playlists that resonate with your unique taste. We're more than just a clone – we're a community of music enthusiasts striving to provide you with seamless navigation, crystal-clear audio quality, and a visually engaging journey through sound. Join us on this melodic adventure and dive into the world of music like never before. Embrace the familiar and the innovative with our Spotify Clone, where the rhythm of your life finds its perfect match.</p>
     <div class="contactform"> <center>
      <fieldset class="the-fieldset">
         <legend >Interact With Us!</legend>
         <br>
-         <form action="">
-                      <label for="name">Name:</label>
+         <form>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <br><br> <br>
             <label for="email">Email:</label>
@@ -79,16 +61,25 @@
              <label for="phone">Phone:</label>
             <input type="text" id="phone" name="phone" required>
             <br><br><br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="1" required></textarea>
-            <br><br><br>
-            <button class="btn btn-primary" type="submit">Submit</button>
+            <button class="btn btn-primary" type="button" id="subbtn" onclick="subform()">Submit</button>
+            <div class="disappear" id="toast"></div>
         </form>
         </fieldset>
         </center>
     </div>
     </div>
-
-    <footer class="footer"> copyright JS industries 2023</footer>
+    <footer class="footer"> <p class="footertext">copyright JS industries 2023 </p></footer>
+    <script src="script.js"></script>
+    <script>
+         function subform() {
+   // var name = document.getElementById("name").value;
+   // var email = document.getElementById("email").value;
+   // var phone = document.getElementById("phone").value;
+      //  if (name !== "" && email !== "" && phone !== "") {
+        document.getElementById("toast").innerText = "saved";
+        console.log("ok");
+   // }
+ }
+    </script>
 </body>
 </html>
