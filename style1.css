@@ -56,9 +56,8 @@ nav ul {
 }
 
 .icons {
-  margin-top: 7px ;
+  margin-top: 7px;
   margin-bottom: 19px;
-
 }
 
 .icons i {
@@ -97,19 +96,50 @@ nav ul {
   opacity: 0;
   transition: opacity 0.5s ease-in;
 }
-/*a.home:link{
-  cursor: pointer;
-  text-decoration: none;
-  color: red;
-}*/
 
-a.home:visited{
+a.home:visited {
   text-decoration: none;
   color: greenyellow;
 }
-a.home:hover{
+a.home:hover {
   cursor: pointer;
   text-decoration: none;
   font-weight: bolder;
   color: rgb(255, 0, 225);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.d {
+  height: 84vh;
+}
+footer {
+  background-color: black;
+  color: white;
+  height: 8vh;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  flex-shrink: 0;
+}
+.contactform {
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+  font-size: larger;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footertext {
+  margin-top: 12px;
+  color: white;
+}
+.disappear{
+ animation: cssAnimation 3s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
 }
